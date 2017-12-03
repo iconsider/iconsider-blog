@@ -19,7 +19,7 @@ public class MomentController {
     public @ResponseBody Moment getMoments(HttpServletRequest request, HttpServletResponse response) {
         String itemNum = request.getParameter("itemNum");
 
-        Moment moment = new Moment("Jesse", "今天天气不错", new Timestamp(System.currentTimeMillis()), new String[]{"/abc"});
+        Moment moment = new Moment(1, "Jesse", "今天天气不错", new Timestamp(System.currentTimeMillis()));
 
         return moment;
     }

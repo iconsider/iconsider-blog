@@ -7,10 +7,18 @@ import java.util.Arrays;
  * Created by Jesse on 2017-9-17.
  */
 public class Moment {
+    private int id = 0;
     private String author = "";
     private String content = "";
     private Timestamp dateTime;
-    private String[] pics;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getAuthor() {
         return author;
@@ -36,31 +44,24 @@ public class Moment {
         this.dateTime = dateTime;
     }
 
-    public String[] getPics() {
-        return pics;
-    }
-
-    public void setPics(String[] pics) {
-        this.pics = pics;
-    }
 
     public Moment() {
     }
 
-    public Moment(String author, String content, Timestamp dateTime, String[] pics) {
+    public Moment(int id, String author, String content, Timestamp dateTime) {
+        this.id = id;
         this.author = author;
         this.content = content;
         this.dateTime = dateTime;
-        this.pics = pics;
     }
 
     @Override
     public String toString() {
         return "Moment{" +
-                "author='" + author + '\'' +
+                "id=" + id +
+                ", author='" + author + '\'' +
                 ", content='" + content + '\'' +
                 ", dateTime=" + dateTime +
-                ", pics=" + Arrays.toString(pics) +
                 '}';
     }
 }
